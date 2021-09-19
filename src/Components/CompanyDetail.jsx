@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import {Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import SingleSearch from "./SingleSearch"
 import uniqid from "uniqid"
+
 
 const CompanyDetail = (props) => {
   
@@ -13,9 +14,9 @@ const CompanyDetail = (props) => {
       let jobsData = await response.json();
       setJobs(jobsData.data)
       console.log(jobsData.data)
-    } catch (e) {
-      console.log(e);
-      return e;
+    } catch (err) {
+      console.log(err);
+      return err;
     }    
   }
 
